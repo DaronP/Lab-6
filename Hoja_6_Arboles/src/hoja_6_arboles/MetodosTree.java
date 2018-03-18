@@ -46,5 +46,24 @@ public class MetodosTree{
             inOrder(nodo.rightChild);
         }
     }
+    
+    public Node findNode(String param){
+        Node focusNode = root;
+        
+        while(focusNode){
+            if(){
+                focusNode = focusNode.leftChild;
+                
+            }
+            else{
+                focusNode = focusNode.rightChild;
+            }
+            
+            if(focusNode == null){
+                return null;
+            }
+        }
+        return focusNode;
+    }
 
 }
