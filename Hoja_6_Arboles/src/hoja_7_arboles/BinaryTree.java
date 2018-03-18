@@ -18,8 +18,45 @@ public class BinaryTree<E>
         raiz = null;
     }
     
+    
     public void insertNode(int id){
         Node newNode = new Node(id);
+        if (raiz == null) //en el casode que la razi no posea 
+        {
+            
+            raiz = newNode;
+            
+        }else{
+            Node focusNode = raiz;
+            
+            Node parent;
+            
+            while(true){
+                
+                parent = focusNode;
+                
+                if(id < focusNode.id)//si el numero es menor al focusNode (que simboliza una raiz), se cambia el enfoque al lado izquierdo
+                {
+                    focusNode = focusNode.left;
+                    
+                    if(focusNode == null)//si el valor que regresa es null, significa que este nodo aun no existe. es un lugar donde puede colocarse el nuevo nodo
+                    {
+                        parent.left = newNode; //se establece el nodo.
+                        return ;//finaliza la ejecucion
+                    }
+                    
+                } else  // en el caso de que el numero sea mayor a FocusNode (raiz), se cambia el enfoque al lado derecho.
+                {
+                    focusNode = focusNode.right;
+                    
+                    if(focusNode == null)// si el valor que regresa es nul, significa que este nodo aun no exite. Es un lugar donde puede colocarse el nuevo nodo.
+                    {
+                        parent.right = newNode;
+                        return; //finaliza la ejecucion
+                    }
+                }
+            }
+        }
     }
     /*
     protected E val; // value associated with node
