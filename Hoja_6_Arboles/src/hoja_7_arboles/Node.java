@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hoja_6_arboles;
+package hoja_7_arboles;
 
 /**
  * 
@@ -11,8 +11,11 @@ package hoja_6_arboles;
  * @author Antonio
  */
 public class Node {
-    Node leftChild;
-    Node rightChild;
+    int id; //numero que va a estar en el nodo, la key del mapa spanish y de english.
+    Node right; // nodo hijo derecho
+    Node left; //nodo hijo izquierdo
     
-    
+    public Node(int id){
+        this.id = id;
+    }
 }

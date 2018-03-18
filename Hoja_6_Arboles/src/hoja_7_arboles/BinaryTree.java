@@ -3,16 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hoja_6_arboles;
+package hoja_7_arboles;
 
 /**
  * 
  * @author Andres
  * @author Antonio
  */
-public class BinaryTree <E>
+public class BinaryTree<E>
 {
-
+    Node raiz; //raiz del arbol
+    
+    public BinaryTree(){
+        raiz = null;
+    }
+    
+    public void insertNode(int id){
+        Node newNode = new Node(id);
+    }
+    /*
     protected E val; // value associated with node
 	protected BinaryTree<E> parent; // parent of node
 	protected BinaryTree<E> left, right; // children of node
@@ -58,12 +67,12 @@ public class BinaryTree <E>
 	// re-parents newLeft if not null
 	{
 		if (isEmpty()) return;
-		if (left != null && left.parent() == this) left.setParent(null); /* No confiamos en el usuario! */
+		if (left != null && left.parent() == this) left.setParent(null);
 		left = newLeft;
 		left.setParent(this);
 	}
 	
-	protected void setParent(BinaryTree<E> newParent) /* no queremos que se llame fuera de nuestro paquete! */
+	protected void setParent(BinaryTree<E> newParent)
 	// post: re-parents this node to parent reference, or null
 	{
 		if (!isEmpty()) {
@@ -89,4 +98,5 @@ public class BinaryTree <E>
 		val = value;
 	}
 	
+        */
 }
