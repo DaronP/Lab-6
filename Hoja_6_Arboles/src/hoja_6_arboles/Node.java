@@ -11,5 +11,8 @@ package hoja_6_arboles;
  * @author Antonio
  */
 public class Node {
+    Node leftChild;
+    Node rightChild;
+    
     
 }
