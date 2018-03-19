@@ -10,9 +10,20 @@ package hoja_6_arboles;
  * @author Andres
  * @author Antonio
  */
-public class Node {
+public class Node { 
+    int key;
+    String word;
+    
     Node leftChild;
     Node rightChild;
     
+    Node(int key, String word){
+        this.key = key;
+        this.word = word;
+    }
+    
+    public String toString(){
+        return word + key;
+    }
     
 }

@@ -1,4 +1,3 @@
-
 package hoja_6_arboles;
 
 public class MetodosTree{
@@ -47,11 +46,11 @@ public class MetodosTree{
         }
     }
     
-    public Node findNode(String param){
+    public Node findNode(int key){
         Node focusNode = root;
         
-        while(focusNode){
-            if(){
+        while(focusNode.key != key){
+            if(key < focusNode.key){
                 focusNode = focusNode.leftChild;
                 
             }
