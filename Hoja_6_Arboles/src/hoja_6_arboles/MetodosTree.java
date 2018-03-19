@@ -4,8 +4,8 @@ public class MetodosTree{
     
     Node root;
     
-    public void addNode(String param){
-        Node newNode = Node(param);
+    public void addNode(int key, String word){
+        Node newNode = Node(key, word);
         
         if(root == null){
             root = newNode;
@@ -17,7 +17,7 @@ public class MetodosTree{
             while(true){
                 parent = focusNode;
                 
-                if(param){
+                if(key < focusNode.key){
                     focusNode = focusNode.leftChild;
                     
                     if(focusNode == null){
@@ -37,6 +37,9 @@ public class MetodosTree{
             }
         }
     }
+    
+    
+    
     
     public void inOrder(Node nodo){
         if(nodo != null){

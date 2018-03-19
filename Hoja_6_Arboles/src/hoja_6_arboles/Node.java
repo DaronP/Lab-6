@@ -10,14 +10,14 @@ package hoja_6_arboles;
  * @author Andres
  * @author Antonio
  */
-public class Node { 
-    int key;
+public class Node {
     String word;
     
     Node leftChild;
     Node rightChild;
+    int key;
     
-    Node(int key, String word){
+    public Node(int key, String word){
         this.key = key;
         this.word = word;
     }
@@ -25,5 +25,15 @@ public class Node {
     public String toString(){
         return word + key;
     }
+    
+    public int getKey (){
+        return key;
+    }
+
+    public void setKey(int key) {
+        this.key = key;
+    }
+    
+    
     
 }
