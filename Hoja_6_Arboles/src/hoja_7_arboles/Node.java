@@ -11,11 +11,15 @@ package hoja_7_arboles;
  * @author Antonio
  */
 public class Node {
-    int id; //numero que va a estar en el nodo, la key del mapa spanish y de english.
+    int id;
+    String ingles;
+    String espanol;
     Node right; // nodo hijo derecho
     Node left; //nodo hijo izquierdo
     
-    public Node(int id){
+    public Node(int id, String ingles, String espanol){
         this.id = id;
+        this.ingles = ingles;
+        this.espanol = espanol;
     }
 }

@@ -17,8 +17,8 @@ import java.util.TreeMap;
 public class Main {
     public static void main(String [] args) throws FileNotFoundException, IOException{
         
-        TreeMap<Integer, String> spanish = new TreeMap<>(); // mapa que va a guardar las palabras en espanol
-        TreeMap<Integer, String> english = new TreeMap<>(); // mapa que va a guardar las palabras en ingles
+        BinaryTree arbol = new BinaryTree();
+        
         
         File words = new File("C:\\Users\\Antonio\\Documents\\NetBeansProjects\\Lab-7\\Hoja_6_Arboles\\src\\hoja_7_arboles\\palabras");
         FileReader read = new FileReader(words);
@@ -31,18 +31,16 @@ public class Main {
             String[] separate = line.split(",");
             String word_english = separate[0];
             String word_spanish = separate[1];
-            
+            arbol.insertNode(word_english.hashCode(), word_english, word_spanish);
             System.out.println(word_english + " " + word_spanish);
-            english.put(contadorYLlave, word_english);
-            spanish.put(contadorYLlave, word_spanish);
-            contadorYLlave = contadorYLlave + 1;
-            //english.add(word_english);
-            //  spanish.add(word_spanish);
+            
         } 
         System.out.println("------------------------------------");
         System.out.println("------------------------------------");
-        System.out.println(english.get(0) + " " + spanish.get(0));
-        System.out.println(english.get(2) + " " + spanish.get(2));
+        System.out.println("house".hashCode());
+        System.out.println("homework".hashCode());
+        System.out.println("town".hashCode());
+        System.out.println("yes".hashCode());
     }
     
 }
