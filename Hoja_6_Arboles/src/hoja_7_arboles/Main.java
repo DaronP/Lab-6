@@ -42,6 +42,9 @@ public class Main {
         String linea;
         
         while((linea = buffSentence.readLine()) != null){
+            while((linea = buffSentence.readLine()) != null){
+                linea = linea.replaceAll("\n", " ");
+            }
             String[] allWords = linea.split(" ");
             for (int i = 0; i < allWords.length; i++){
                 String variable = allWords[i];
