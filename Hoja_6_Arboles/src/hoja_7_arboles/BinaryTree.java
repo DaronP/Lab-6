@@ -86,7 +86,6 @@ public class BinaryTree<E>
             
             if(focusNode == null)//si el nodo es null se refiere a que se llegó al final del arbol, por lo que se va a imprimir la palabra en ingles entre *.
             {
-            } else {
                 return " * " + ingles + " * ";
             }
         }

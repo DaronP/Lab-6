@@ -34,17 +34,17 @@ public class Main {
             System.out.println(word_english + " " + word_spanish);
             
         }
-        
         File sentence = new File("C:\\Users\\Antonio\\Documents\\NetBeansProjects\\HT7\\Hoja_6_Arboles\\src\\hoja_7_arboles\\oraciones");
         FileReader readSentence = new FileReader(sentence);
         BufferedReader buffSentence = new BufferedReader(readSentence);
         
         String linea;
-        
+        String variable;
         while((linea = buffSentence.readLine()) != null){
+            //allWords[cont] = linea.split(" ");
             String[] allWords = linea.split(" ");
             for (int i = 0; i < allWords.length; i++){
-                String variable = allWords[i];
+                variable = allWords[i];
                 System.out.print(arbol.find(variable, variable.hashCode()));
                 
             }
